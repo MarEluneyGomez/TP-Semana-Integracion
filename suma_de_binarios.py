@@ -3,7 +3,6 @@
 # Luego, sumamos los bits de derecha a izquierda, teniendo en cuenta el acarreo (carry) que se produce cuando la suma de dos bits es mayor o igual a 2.
 # Finalmente, si al final de la suma hay un acarreo, lo agregamos al resultado.
 
-
 def suma_binaria(num1, num2):
     max_leng = max(len(num1), len(num2)) #Utilizamos el max para obtener la longitud del numero mas largo   
     num1 = num1.zfill(max_leng)  #Utilizamos el .zfill para rellenar la cadena con ceros a la izquierda, para que ambos numeros tengan la misma longitud 
@@ -38,7 +37,6 @@ if not all(bit in '01' for bit in bin1) or not all(bit in '01' for bit in bin2):
 else:
     resultado = suma_binaria(bin1, bin2)
     print(f"La suma de {bin1} y {bin2} es: {resultado}")
-
 
 
 #Por Ejemplo:
