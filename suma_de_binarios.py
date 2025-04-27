@@ -5,7 +5,7 @@
 
 def suma_binaria(num1, num2):
     max_leng = max(len(num1), len(num2)) #Utilizamos el max para obtener la longitud del numero mas largo   
-    num1 = num1.zfill(max_leng)  #Utilizamos el .zfill para rellenar la cadena con ceros a la izquierda, para que ambos numeros tengan la misma longitud 
+    num1 = num1.zfill(max_leng)  #Utilizamos el metodo .zfill para rellenar la cadena con ceros a la izquierda, para que ambos numeros tengan la misma longitud 
     num2 = num2.zfill(max_leng)
 
     resultado = "" #La variable resultado va a almacenar el resultado de la suma
@@ -17,8 +17,8 @@ def suma_binaria(num1, num2):
         bit2 = int(num2[i])
 
         suma = bit1 + bit2 + carry #Sumamos los dos bits y el acarreo (carry) de la iteracion anterior
-        resultado2 = suma % 2 #Utilizamos el modulo para obtener el resultado de la suma en binario (0 o 1)
         carry = suma // 2 #Utilizando la division entera nos va a decir si hay que llevar 1 bit de carry en la prixima iteracion
+        resultado2 = suma % 2 #Utilizamos el modulo para obtener el resultado de la suma en binario (0 o 1)
 
         resultado = str(resultado2) + resultado #Aqui convertimos el resultado2 en cadena, para agregarlo al resultado principal
 
